@@ -6,10 +6,10 @@ ENV BUILD_DATE 2016-11-16
 
 
 #uncomment this if you use Postgres
-#RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" > /etc/apt/sources.list.d/pgdg.list && \
-#    apt-get update && \
-#    DEBIAN_FRONTEND=noninteractive \
-#    apt-get install -y --force-yes postgresql-client-9.3
+RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" > /etc/apt/sources.list.d/pgdg.list && \
+    apt-get update && \
+    DEBIAN_FRONTEND=noninteractive \
+    apt-get install -y --force-yes postgresql-client-9.3
 
 ENV MIX_ENV prod
 ENV PORT 4001
